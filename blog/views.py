@@ -1,28 +1,43 @@
 from django.shortcuts import render
 
-#fakeposts
-posts =[
+
+
+posts = [
     {
-        'author': 'user1',
-        'title': 'Blog Post 1',
-        'content': 'Test',
-        'date': 'August 12 2002'
+        'author': 'kevin',
+        'title': 'Moin Moin',
+        'content': 'gerade aufgestanden, erstmal ne Runde Fortnite',
+        'date_posted': '27.Oktober.2020'
     },
     {
-        'author': 'user2',
-        'title': 'Blog Post 2',
-        'content': 'Fortnite <3',
-        'date': 'August 13 2002'
+        'author': 'bastian',
+        'title': 'Anker lichten!',
+        'content': 'AHOOOOOOOOOOOOOOOIIIIIIIIIIII IHR LANDRATTEN!',
+        'date_posted': '27.Oktober.2020'
+    },
+    {
+        'author': 'julian',
+        'title': 'Motiviert',
+        'content': 'richtig Bock auf Kosten',
+        'date_posted': '12.Oktober.2020'
+    },
+    { 
+        'author': 'torben',
+        'title': 'Hello World',
+        'content': '\N{winking face}',
+        'date_posted': '06.Oktober.2020'
     }
+    
 ]
 
 
-def home(request): #request is always needed
+# Create your views here.
+def home(request):
     context = {
         'posts': posts
     }
-    return render(request, 'blog/home.html', context)# subdirectory in templates folder
-                                            #render returns httpresponse !!!
+    return render(request, 'blog/home.html', context)
+
 def about(request):
-    return render(request, 'blog/about.html', {'title': 'Seminar Blog'})
+    return render(request, 'blog/about.html', {'title': 'About'})
 
