@@ -5,7 +5,7 @@ posts =[
     {
         'author': 'user1',
         'title': 'Blog Post 1',
-        'content': 'Hello world',
+        'content': 'Test',
         'date': 'August 12 2002'
     },
     {
