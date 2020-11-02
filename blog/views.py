@@ -11,7 +11,7 @@ posts =[
     {
         'author': 'user2',
         'title': 'Blog Post 2',
-        'content': 'Hello world2',
+        'content': 'Fortnite <3',
         'date': 'August 13 2002'
     }
 ]
