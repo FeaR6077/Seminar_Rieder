@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Post ## aus models eine Post klasse importieren
 
 
 posts = [
@@ -28,13 +28,14 @@ posts = [
         'date_posted': '06.Oktober.2020'
     }
     
-]
+] 
+
 
 
 # Create your views here.
 def home(request):
     context = {
-        'posts': posts
+        'posts': Post.objects.all()
     }
     return render(request, 'blog/home.html', context)
 
