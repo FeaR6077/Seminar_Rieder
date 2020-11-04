@@ -1,0 +1,52 @@
+(03-11-2020)
+create superuser
+python manage.py migrate
+python manage.py createsuperuser
+
+
+
+
+
+1. created user class und models.py with multiple imports
+2. "python manage.py makemigrations" to migrate table creates migrations/0001 file
+3. checkout migrations/0001_initial.py (exact SQL code)
+this file is compatible with our DB
+Migrations are useful cause it allows us to do changes
+to our DB even tho its allready created and has data in it. (auto generated)
+
+"python manage.py sqlmigrate blog 0001" //check the sql code
+
+"python manage.py migrate" create migration
+
+enter shell
+python manage.py shell
+
+imports
+from blog.models import Post
+from django.contrib.auth.models import User
+
+get all user
+User.objects.all()
+User.objects.first()
+User.objects.filter(username='<username>')
+User.objects.filter(username='<username>').first()
+user = User.objects.filter(username='julian').first()
+user.id
+user.pk
+
+get all posts
+Post.objects.all()
+post_1 = Post(title='Blog1', content='First Post Content!', author=user)
+
+
+create posts for user
+user.post_set.create(title='Blog 3', content='Third Post!')
+
+in admin.py register models for admin page!
+
+from .models import Post
+admin.site.register(Post)
+
+now able to update, create, mutate posts via the admin GUI
+
+
