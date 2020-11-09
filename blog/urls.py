@@ -8,4 +8,5 @@ urlpatterns = [
     #path = blog/about/ "/" is important
     path('', views.home, name='blog-home'),#name = name for path pattern (f.e NAV-BAR)
     path('about/', views.about, name='blog-about'),
+    path('register/', views.about, name='blog-register'),
 ]
