@@ -17,7 +17,7 @@ posts = [
     {
         "author": "julian",
         "title": "Motiviert",
-        "content": "testneu",
+        "content": "testneuneu",
         "date_posted": "12.Oktober.2020",
     },
     {
