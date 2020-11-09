@@ -28,3 +28,7 @@ python manage.py startapp <name>
 
 #create templates
 appname -> templates -> appname -> template.html
+
+
+//mycomment
+//2ndcomment
