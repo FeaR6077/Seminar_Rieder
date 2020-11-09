@@ -17,7 +17,7 @@ posts = [
     {
         "author": "julian",
         "title": "Motiviert",
-        "content": "richtig Bock auf Kosten",
+        "content": "test",
         "date_posted": "12.Oktober.2020",
     },
     {
