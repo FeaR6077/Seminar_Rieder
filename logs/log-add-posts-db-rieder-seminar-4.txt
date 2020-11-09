@@ -49,5 +49,5 @@ admin.site.register(Post)
 
 now able to update, create, mutate posts via the admin GUI
 
-test test
+test test test
 
