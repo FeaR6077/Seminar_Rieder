@@ -1,0 +1,41 @@
+1. urls.py -> import hinzufügen -> from django.contrib.auth import views as auth_views
+ 1.1 Paths ergänzen: Register-path kopieren, 2x einfügen, bearbeiten in Login und Logout
+	path('login/', auth_views.LoginView.as_view(), name='login'),
+    	path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+
+	---- Achtung: Bei Ausführung erscheint hier noch eine Fehlermeldung - Template fehl! ----
+
+
+2. urls.py -> template_names einfügen ! html-Seiten bestehen noch nicht, werden aber im weiteren Schritt erstellt
+
+3. users/templates/users -> new file(login.html) -> register copy and paste
+ 3.1 Änderungen durchführen und Pfad neu setzen
+ 3.2 Register -> Pfad neu setzen
+ 3.3 base.html -> Pfad neu setzen, damit Menüleiste auch funktional ({% url 'login' %})
+
+4. neuen User erstellt (/admin) -> Login-Test -> Fehler -> Seite fehlt!
+	Funktionalität der Login-Seite fehlt noch
+
+5. settings.py -> LOGIN_REDIRECT_URL = 'blog-home'
+ -> wir kommen nach dem Login auf die Startseite!
+ -> blog-home (views.py)
+ -> blog-home wird zu login (da nach Registrierung eine Anmeldung erfolgen soll)
+ -> Aufforderung wird ebenfalls hinzugefügt
+
+6. logout.html erstellen -> Register.html copy/paste -> Aufbau ändern
+
+7. base.html -> Login/Logout nun auch in der Menüleiste anzeigen
+             -> If/Else Verknüpfung einfügen inkl dem neuen Reiter Logout 
+		-> Logik dahinter: Sofern eingeloggt, ausschließlich möglichkeit zum ausloggen 
+				   -> sofern ausgeloggt, Möglichkeit zur Anmeldung, als auch Registrierung
+
+
+8. users -> views.py -> neue Methode profile
+ 8.1 neue profile.html in users
+ 8.2 login copy/pasted -> neue Eintragung h2 usernames
+ 8.3 urls.py (Seminar) -> neuer Patch erstellen: profile
+ 8.4 base.html -> logout kopieren und an gleicher Stelle einfügen -> umändern in profile
+ 8.5 views.py import login_required und verknüpfe Methode
+ 8.6 settings.py LOGIN_URL = 'login' -> statt Fehler, Aufforderung zum LogIn
+
+
