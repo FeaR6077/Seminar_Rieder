@@ -122,10 +122,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = Path(__file__).joinpath(BASE_DIR, 'media') # Directory, wo hochgeladene Bilder gespeichert werden
+MEDIA_URL = '/media/' 
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
+
 
 
 
