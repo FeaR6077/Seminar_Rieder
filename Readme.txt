@@ -28,3 +28,9 @@ python manage.py startapp <name>
 
 #create templates
 appname -> templates -> appname -> template.html
+
+
+#####language####
+django-admin makemessages -l fi --ignore venv
+
+django-admin compilemessages --ignore venv
