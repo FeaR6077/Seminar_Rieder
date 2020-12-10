@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-18 16:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: blog/templates/blog/base.html:37
+msgid "Home"
+msgstr "Koti"
+
+#: blog/templates/blog/base.html:38
+msgid "About"
+msgstr "Noin"
+
+#: blog/templates/blog/base.html:44
+msgid "Profil"
+msgstr "Profiili"
+
+#: blog/templates/blog/base.html:45
+msgid "Logout"
+msgstr "Kirjautua ulos"
+
+#: blog/templates/blog/base.html:47
+msgid "Login"
+msgstr "Kirjautua ulos"
+
+#: blog/templates/blog/base.html:48
+msgid "Register"
+msgstr "Rekisteröi"
+
+#: blog/templates/blog/base.html:53
+msgid "Search"
+msgstr "Hae"
+
+#: blog/templates/blog/base.html:76
+msgid "Sidebar"
+msgstr "Sivupalkki"
+
+#: blog/templates/blog/base.html:77
+msgid "Overview"
+msgstr "Yleiskatsaus"
+
+#: blog/templates/blog/base.html:79
+msgid "Latest Posts"
+msgstr "Uusimmat viestit"
+
+#: blog/templates/blog/base.html:80
+msgid "Announcements"
+msgstr "Ilmoitukset"
+
+#: blog/templates/blog/base.html:81
+msgid "Calendar"
+msgstr "Kalenteri"
+
+#: blog/templates/blog/base.html:82
+msgid "Friends List"
+msgstr "Kalenteri"
+
+#: blog/templates/blog/home.html:12
+msgid "From"
+msgstr "Alkaen"
+
+#: blog/templates/blog/home.html:12
+msgid "posted date "
+msgstr "Lähetyspäivämäärä "

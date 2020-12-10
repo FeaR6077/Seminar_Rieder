@@ -1,14 +1,21 @@
 {% extends "blog/base.html" %}
+{% load i18n %}
 {% block content %}
-    {% for post in posts %}
-        <article class="media content-section">
-            <div class="media-body">
-            <div class="article-metadata">
-                <p>Von <a class="mr-2" href="#">{{ post.author }}</a>gepostet am <small class="text-muted">{{ post.date_posted }}</small></p>
-            </div>
-            <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
-            <p class="article-content">{{ post.content }}</p>
-            </div>
-        </article>
-    {% endfor %}
+{% get_current_language as LANGUAGE_CODE %}
+language: {{ LANGUAGE_CODE }}
+
+
+{% for post in posts %}
+<article class="media content-section">
+    <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+    <div class="media-body">
+        <div class="article-metadata">
+            <p>{%trans "From"%} <a class="mr-2" href="#">{{ post.author }}</a>{%trans "posted date " %}<small
+                    class="text-muted">{{ post.date_posted }}</small></p>
+        </div>
+        <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+        <p class="article-content">{{ post.content }}</p>
+    </div>
+</article>
+{% endfor %}
 {% endblock content %}
